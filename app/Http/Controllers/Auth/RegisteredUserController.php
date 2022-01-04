@@ -43,7 +43,7 @@ class RegisteredUserController extends Controller
             ]);
 
             if ($request->has('avatar')) {
-                //
+                $user->avatar = $request->file('avatar')->store('public/avatar');
             }
             /*
             foreach ($request->roles as $role) {
